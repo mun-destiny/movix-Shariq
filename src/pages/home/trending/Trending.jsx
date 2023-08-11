@@ -7,6 +7,7 @@ import SwitchTabs from "../../../components/switchTabs/SwitchTabs";
 import useFetch from "../../../hooks/useFetch";
 
 const Trending = () => {
+    console.log('<Trending />')
     const [endpoint, setEndpoint] = useState("day");
 
     const { data, loading } = useFetch(`/trending/movie/${endpoint}`);

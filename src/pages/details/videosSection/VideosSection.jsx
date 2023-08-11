@@ -8,6 +8,7 @@ import Img from "../../../components/lazyLoadImage/Img";
 import { PlayIcon } from "../Playbtn";
 
 const VideosSection = ({ data, loading }) => {
+    console.log('<VideosSection />')
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState(null);
 

@@ -9,6 +9,7 @@ import Img from "../../../components/lazyLoadImage/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 
 const HeroBanner = () => {
+    console.log('<HeroBanner />')
     const [background, setBackground] = useState("");
     const [query, setQuery] = useState("");
     const navigate = useNavigate();

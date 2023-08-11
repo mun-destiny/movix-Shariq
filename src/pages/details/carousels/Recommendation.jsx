@@ -4,6 +4,7 @@ import Carousel from "../../../components/carousel/Carousel";
 import useFetch from "../../../hooks/useFetch";
 
 const Recommendation = ({ mediaType, id }) => {
+    console.log('<Recommendation />')
     const { data, loading, error } = useFetch(
         `/${mediaType}/${id}/recommendations`
     );

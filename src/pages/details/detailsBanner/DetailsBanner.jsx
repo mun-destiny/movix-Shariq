@@ -15,6 +15,7 @@ import { PlayIcon } from "../Playbtn";
 import VideoPopup from "../../../components/videoPopup/VideoPopup";
 
 const DetailsBanner = ({ video, crew }) => {
+    console.log('<DetailsBanner />')
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState(null);
 
