@@ -17,12 +17,13 @@ function App() {
     console.log('<App />')
     const dispatch = useDispatch();
     const { url } = useSelector((state) => state.home);
-    console.log(url);
+    const { state } = useSelector((state) => state);
+    console.log(state);
 
     useEffect(() => {
         fetchApiConfig();
         genresCall();
-    }, []);
+    }, [state]);
 
     const fetchApiConfig = () => {
         console.log({'func': 'fetchApiConfig'})
