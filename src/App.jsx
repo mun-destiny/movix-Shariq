@@ -56,13 +56,15 @@ function App() {
     };
 
     return (
-        <BrowserRouter>
+        <BrowserRouter
+            basename={import.meta.env.DEV ? '/' : '/movix/'}
+        >
             <Header />
             <Routes>
-                <Route path="/movix-Shariq/" element={<Home />} />
-                <Route path="/movix-Shariq/:mediaType/:id" element={<Details />} />
-                <Route path="/movix-Shariq/search/:query" element={<SearchResult />} />
-                <Route path="/movix-Shariq/explore/:mediaType" element={<Explore />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/:mediaType/:id" element={<Details />} />
+                <Route path="/search/:query" element={<SearchResult />} />
+                <Route path="/explore/:mediaType" element={<Explore />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
             <Footer />

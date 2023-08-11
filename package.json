@@ -3,10 +3,13 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://mun-destiny.github.io/movix-Shariq/",
-    "reference_1": "https://blog.devgenius.io/how-to-deploy-your-vite-react-app-to-github-pages-with-and-without-react-router-b060d912b10e",
-    "reference_2": "https://github.com/vitejs/vite/blob/main/docs/guide/static-deploy.md",
-    "reference_3": "https://github.com/ErickKS/vite-deploy",
+    "homepage": "https://mun-destiny.github.io/movix-Shariq",
+    "reference": [
+        "https://blog.devgenius.io/how-to-deploy-your-vite-react-app-to-github-pages-with-and-without-react-router-b060d912b10e",
+        "https://github.com/vyonizr/react-vite-gh-pages",
+        "https://github.com/vitejs/vite/blob/main/docs/guide/static-deploy.md",
+        "https://github.com/ErickKS/vite-deploy"
+    ],
     
     "scripts": {
         "dev": "vite --host",
