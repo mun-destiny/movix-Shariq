@@ -11,12 +11,14 @@ import Spinner from "../../components/spinner/Spinner";
 import noResults from "../../assets/no-results.png";
 
 const SearchResult = () => {
+    console.log('<SearchResult />')
     const [data, setData] = useState(null);
     const [pageNum, setPageNum] = useState(1);
     const [loading, setLoading] = useState(false);
     const { query } = useParams();
 
     const fetchInitialData = () => {
+        console.log({'func': 'fetchInitialData'})
         setLoading(true);
         fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then(
             (res) => {
@@ -28,6 +30,7 @@ const SearchResult = () => {
     };
 
     const fetchNextPageData = () => {
+        console.log({'func': 'fetchNextPageData'})
         fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then(
             (res) => {
                 if (data?.results) {

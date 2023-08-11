@@ -18,15 +18,13 @@ const sortbyData = [
     { value: "popularity.asc", label: "Popularity Ascending" },
     { value: "vote_average.desc", label: "Rating Descending" },
     { value: "vote_average.asc", label: "Rating Ascending" },
-    {
-        value: "primary_release_date.desc",
-        label: "Release Date Descending",
-    },
+    { value: "primary_release_date.desc", label: "Release Date Descending" },
     { value: "primary_release_date.asc", label: "Release Date Ascending" },
     { value: "original_title.asc", label: "Title (A-Z)" },
 ];
 
 const Explore = () => {
+    console.log('<Explore />')
     const [data, setData] = useState(null);
     const [pageNum, setPageNum] = useState(1);
     const [loading, setLoading] = useState(false);
@@ -37,6 +35,7 @@ const Explore = () => {
     const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
 
     const fetchInitialData = () => {
+        console.log({'func': 'fetchInitialData'})
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
             setData(res);
@@ -46,6 +45,7 @@ const Explore = () => {
     };
 
     const fetchNextPageData = () => {
+        console.log({'func': 'fetchNextPageData'})
         fetchDataFromApi(
             `/discover/${mediaType}?page=${pageNum}`,
             filters

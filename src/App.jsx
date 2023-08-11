@@ -14,6 +14,7 @@ import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 
 function App() {
+    console.log('<App />')
     const dispatch = useDispatch();
     const { url } = useSelector((state) => state.home);
     console.log(url);
@@ -24,8 +25,8 @@ function App() {
     }, []);
 
     const fetchApiConfig = () => {
+        console.log({'func': 'fetchApiConfig'})
         fetchDataFromApi("/configuration").then((res) => {
-            console.log(res);
 
             const url = {
                 backdrop: res.images.secure_base_url + "original",
@@ -38,6 +39,7 @@ function App() {
     };
 
     const genresCall = async () => {
+        console.log({'func': 'genresCall'})
         let promises = [];
         let endPoints = ["tv", "movie"];
         let allGenres = {};
