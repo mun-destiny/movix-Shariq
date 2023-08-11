@@ -23,10 +23,10 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Build project
-      # run: npm run build
-      # There is a GitHub’s 404 error when we refresh the page on children path relative to the basename route
-      # https://github.com/vyonizr/react-vite-gh-pages/
-        run: npm run build && cp ./dist/index.html .dist/404.html
+        run: npm run build
+        # run: npm run build && cp ./dist/index.html .dist/404.html
+        # https://github.com/vyonizr/react-vite-gh-pages/
+        # There is a GitHub’s 404 error when we refresh the page on children path relative to the basename route
         # It is recommended to use npm or yarn as the package manager and has 
         # its package-lock.json or yarn.lock lockfile present in the repository.
         # GitHub Actions does not support pnpm’s pnpm-lock.yaml at the moment of this writing.
